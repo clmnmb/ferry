@@ -6,7 +6,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/re
 RUN apk update && \
     apk add --no-cache git && \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/* $HOME/.cache
-RUN git clone https://gitee.com/yllan/ferry_web.git
+
+#RUN git clone https://gitee.com/yllan/ferry_web.git
+RUN git clone https://github.com/clmnmb/ferry_web.git
 
 WORKDIR ferry_web
 
